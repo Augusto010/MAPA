@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Signika+Negative:wght@300;400&family=Ubuntu:wght@500&display=swap");
+
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 24px;
+    background-color: red;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: aliceblue;
+}
+
+.img{
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+}
+
+.item0{
+    display: felx;
+    justify-content: space-around;
+    gap: 10px 10px;
+}
+
+main{
+    background-color: #f9b233;
+    padding: 20px;
+}
+
+.cardapio{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contato{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
