@@ -11,37 +11,41 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <header>
+<header>
         <a href="index.php"><img src="logo.png" class="logo"></a>
         <nav>
             
-            <a href="#"><h3 class="a1">home</h3></a>
-            <a href="#"><h3 class="a1">Blog</h3></a>
-            <a href="#"><h3 class="a1">Conheça Dona Rita</h3></a>
+            <a href="#"><h3 class="home">home</h3></a>
+            <a href="#"><h3 class="2">Blog</h3></a>
+            <a href="#"><h3 class="3">Conheça Dona Rita</h3></a>
         </nav>
     </header>
 
     <main>
-            <div class="fundo">
-            <h1 class="texto-fundo"><b>Marmitas da Dona Rita, escolha as suas!!</b></h1>
-            </div>
-            <h1 class="confira">Confira nossas marmitas:</h1>
             <div class="cardapio">
             <?php
-            
-                foreach($marmitas as $key => $value){
-                
-            ?>
-            <article>
-                <div class="item">
-                <h2><?=$value["nome"];?></h2>
-                <a href="index2.php?id=<?=$value["id"];?>"><img  class="img" src=<?=$value["imagem"];?>></a>
-                <p><?=substr($value["tamanho"], 0, 150);?></p>
-                <p><?=substr($value["ingredientes"], 0, 150);?></p>
-                </div>
-            </article>
-            <?php
-                }
+            if(isset($_GET["id"]) && !empty($_GET["id"])){
+                    //echo"id".$_GET["id"];
+
+                $id = $_GET["id"];
+                    //echo "id= ". $id;
+                    foreach($marmitas as $key => $value){
+                            if($value["id"] == $id){
+                ?>
+                <article>
+                    <div class="item">
+                    <h2><?=$value["nome"];?></h2>
+                    <a href="#"><img  class="img" src=<?=$value["imagem"];?>></a>
+                    <p><?=substr($value["tamanho"], 0, 150);?></p>
+                    <p><?=substr($value["ingredientes"], 0, 150);?></p>
+                    </div>
+                </article>
+                <?php
+                                }
+                            }
+                    }else{
+                        echo"não existe";
+                    }
             ?>
             </div>
     </main>

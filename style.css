@@ -2,14 +2,33 @@
 
 *{
     font-family: 'Raleway', sans-serif;
+    margin: 0px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: red;
 }
 
 nav{
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
     gap: 20px;
-    padding: 24px;
-    background-color: red;
+    margin-left: 700px;
+}
+
+.texto-fundo{
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+}
+
+.confira{
+    margin-top: 20px;
 }
 
 .footer{
@@ -26,6 +45,21 @@ nav{
     height: auto;
 }
 
+.fundo{
+    background-image: url('img00.jpg');
+    height: 500px;
+    border-bottom: 1px solid black;
+    border-top: 5px solid yellow;
+}
+
+.logo{
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+    gap: 50px;
+}
+
 .item0{
     display: felx;
     justify-content: space-around;
@@ -34,12 +68,13 @@ nav{
 
 main{
     background-color: #f9b233;
-    padding: 20px;
 }
 
 .cardapio{
     display: flex;
-    justify-content: space-around;
+    justify-content:flex-start;
+    gap:10%;
+    margin-left: 20px;
 }
 
 .contato{
